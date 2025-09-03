@@ -1,7 +1,11 @@
+#python doesnt have them
+
 #contrary to arrays
     # items can be place anywhere in the memory
     # dinamic size can keep on adding elements to list
     # not need to be the same type
+
+#contrary to lists the linked list "data blocks" in the memory dont need to be together, so when we append we dont move the whole list
 
 #are basicly set of elements/nodes
     #has 2 parts
