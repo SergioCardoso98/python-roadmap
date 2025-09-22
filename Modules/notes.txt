@@ -12,5 +12,34 @@ When I import module_1, Python:
     - Adds that module object to sys.modules (a dictionary of all loaded modules) (also an object).
     - Adds a reference in the current namespace (globals() or wherever it’s imported).
 
+I import module_2 functions directly and they show diferent in the prints
+
 We can see it in the locals - print(locals())
     {'__name__': '__main__', '__doc__': None, '__package__': None, '__loader__': <_frozen_importlib_external.SourceFileLoader object at 0x102528d60>, '__spec__': None, '__annotations__': {}, '__builtins__': <module 'builtins' (built-in)>, '__file__': '/Users/ctw04025/PersonalLearning/python-roadmap/Modules/main.py', '__cached__': None, 'module_1': <module 'module_1' from '/Users/ctw04025/PersonalLearning/python-roadmap/Modules/module_1.py'>}
+
+Modules
+    -A module is a .py file containing functions, classes, and variables.
+    -You can import a module using import module_name or from module_name import something.
+    -Modules help organize code, making it reusable and easier to maintain
+
+Package
+    -A package organizes multiple modules into hierarchical directories.
+    -A package is a directory containing a special file called __init__.py.
+    -The __init__.py file can be empty or contain initialization code for the package.
+    -Modules in packages are imported using dotted syntax: from package import module. ex: whole_package.hello.hello_en.print_hello_en()
+    -Packages can have subpackages, creating a tree-like structure of modules.
+    -Relative imports (from . import module) are used inside packages for easier access to related modules.
+    -Packages can be spread across multiple directories as long as they are on sys.path and contain __init__.py.
+
+__init__.py 
+    -can put the files/functions i want to be defaulted whem importing, instead of needing to be specific which file/function I want
+    my_package/
+    __init__.py
+    module1.py
+    sub_package/
+        __init__.py
+        module2.py
+
+    can do with import my_package.module1
+
+    see example in main.py
