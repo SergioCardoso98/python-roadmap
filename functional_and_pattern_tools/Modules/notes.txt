@@ -43,3 +43,10 @@ __init__.py
     can do with import my_package.module1
 
     see example in main.py
+
+
+    If a package's __init__.py does not define an __all__ list, then using from package import * will not automatically import the package’s submodules. 
+    Instead, only the names (functions, classes, variables) explicitly defined in __init__.py are imported. To expose submodules during wildcard imports, 
+    they must either be included in an __all__ list or imported manually within __init__.py.
+
+    https://docs.python.org/3/py-modindex.html
