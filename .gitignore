@@ -1,0 +1,9 @@
+# Ignore macOS system files
+.DS_Store
+__pycache__
+
+# Ignore common_packages venv
+common_packages/bin
+common_packages/include
+common_packages/lib
+common_packages/pyvenv.cfg
