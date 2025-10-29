@@ -7,3 +7,4 @@ common_packages/bin
 common_packages/include
 common_packages/lib
 common_packages/pyvenv.cfg
+common_packages/.env
