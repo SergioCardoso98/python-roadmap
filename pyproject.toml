@@ -1,0 +1,59 @@
+# -----------------------------
+# 1. BUILD SYSTEM
+# -----------------------------
+# Required for pip and other build tools
+[build-system]
+requires = ["setuptools>=42", "wheel"]   # dependencies needed to build the project
+build-backend = "setuptools.build_meta"  # tool to build your package
+
+# -----------------------------
+# 2. PROJECT METADATA
+# -----------------------------
+[project]
+name = "my_project"             # package name
+version = "0.1.0"               # version number
+description = "A short description"
+authors = [{name="Alice", email="alice@example.com"}]
+license = {text="MIT"}          # SPDX license identifier
+dependencies = [
+    "requests>=2.25.1",
+    "numpy>=1.23"
+]
+
+# Optional project metadata
+readme = "README.md"
+homepage = "https://github.com/alice/my_project"
+keywords = ["python", "example", "demo"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License"
+]
+
+# -----------------------------
+# 3. DEVELOPMENT TOOLS CONFIGURATION
+# -----------------------------
+# Black (code formatter)
+[tool.black]
+line-length = 88
+target-version = ['py310']
+
+# isort (import sorter)
+[tool.isort]
+profile = "black"
+
+# pytest (testing)
+[tool.pytest.ini_options]
+minversion = "6.0"
+addopts = "--verbose"
+testpaths = ["tests"]
+
+# -----------------------------
+# 4. OPTIONAL: POETRY STYLE (Alternative Dependency Management)
+# -----------------------------
+# [tool.poetry]
+# name = "my_project"
+# version = "0.1.0"
+# description = "A short description"
+# authors = ["Alice <alice@example.com>"]
+# dependencies = {python=">=3.10", requests="^2.25"}
+# dev-dependencies = {pytest="^7.0", black="^23.0"}
