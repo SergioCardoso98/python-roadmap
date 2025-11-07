@@ -3,8 +3,8 @@
 __pycache__
 
 # Ignore common_packages venv
-common_packages/bin
-common_packages/include
-common_packages/lib
-common_packages/pyvenv.cfg
-common_packages/.env
+Common Packages/bin
+Common Packages/include
+Common Packages/lib
+Common Packages/pyvenv.cfg
+Common Packages/.env
