@@ -1,10 +1,24 @@
+# Ignore Python cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Ignore virtual environments (any folder named venv, bin, lib, include, pyvenv.cfg inside any folder)
+*/bin/
+*/lib/
+*/include/
+*/pyvenv.cfg
+.env
+
 # Ignore macOS system files
 .DS_Store
-__pycache__
 
-# Ignore common_packages venv
-Common Packages/bin
-Common Packages/include
-Common Packages/lib
-Common Packages/pyvenv.cfg
-Common Packages/.env
+# Ignore logs
+*.log
+
+# Optional: ignore editor temp files
+*.swp
+*.swo
+*.idea/
+.vscode/
