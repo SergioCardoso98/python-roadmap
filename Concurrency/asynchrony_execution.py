@@ -99,7 +99,10 @@ async def main4():
 
     end_time_main4 = time.time()
     print(f"[TIME] Main4 completed in {end_time_main4 - start_time_main4:.2f} seconds\n")
-
+    
+# ------------------------------
+# Concurrent execution with Lock (safe shared resource modification)
+# ------------------------------
 # ------------------------------
 # Quick note about Locks
 # ------------------------------
@@ -137,9 +140,6 @@ async def increment():
         shared_counter = temp + 1
         print(f"Counter incremented to: {shared_counter}")
 
-# ------------------------------
-# Concurrent execution with Lock (safe shared resource modification)
-# ------------------------------
 async def main5():
     start_time_main5 = time.time()
     print("\n=== Running Main5: Concurrent Increments with Lock ===")
