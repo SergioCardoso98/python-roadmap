@@ -17,7 +17,7 @@ class DataclassExploration:
         if not self.list_or_dict_assign:
             raise ValueError('list_or_dict_assign can\'t be empty')
 
-    # Custom method to describe the class
+    # Custom method to describe the class (Doesnt bellong to DataClasses, its mine)
     def what_is_this(self):
         print('This is a class to test the dataclasses package')
 
