@@ -19,6 +19,7 @@ class HybridVehicle(ElectricVehicle, GasolineVehicle):
         
         # Initialize the electric vehicle part by calling its constructor
         # Pass the battery-specific parameters to ElectricVehicle's __init__
+        # using super().__init__() is apparently best practice
         ElectricVehicle.__init__(self, type, brand, year, model, battery_model, battery_status)
         
         # Initialize the gasoline vehicle part by calling its constructor
